@@ -1,0 +1,14 @@
+[
+    {
+        "message": "My first todo from json",
+        "completed": false
+    },
+    {
+        "message": "My second todo from json",
+        "completed": true
+    },
+    {
+        "message": "My third todo from json",
+        "completed": false
+    }
+]
