@@ -11,7 +11,7 @@
     </div>
 
     <div class="todo-app">
-      <TodoInput />
+      <TodoInput @add-todo="onAddTodo"/>
 
       <div class="todo-app__list">
         <Transition name="fade" mode="out-in">
@@ -57,6 +57,11 @@ const totalNumberOfTodos = computed(() => {
 });
 
 // METHODS
+const onAddTodo = (todo) => {
+  todoList.value = [todo, ...todoList.value];
+  filteredToDoList.value = [...todoList.value];
+}
+
 const onRemoveCard = (cardIndex) => {
     // remove selected card from todoList
     todoList.value = [...todoList.value.filter((item, index) => index !== cardIndex)];
